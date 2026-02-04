@@ -1,0 +1,18 @@
+ File Reader 
+ A java class used to read the character from the text file 
+ Its reads character at one time from text file
+
+ How Its Works 
+         |
+         |
+         |
+     1. File open 
+     2.Read one character \
+     3. Give ASCIII value 
+     4. At the end it return -1=
+
+  File → FileReader → Program
+
+ Code 
+ __________
+

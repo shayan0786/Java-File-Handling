@@ -1,0 +1,2 @@
+This is Example and Simple Code for reading  the file using File Character
+FileReader is java class which read a character from the text file
