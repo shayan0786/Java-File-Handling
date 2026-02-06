@@ -1,0 +1,11 @@
+File Writer 
+File Writer is the java class used top write character into txt file . it is 
+mainly used to create and save the file
+
+
+Program → FileWriter → File
+
+
+append ---> true should be there if nnoyt then i will overwrite the old file data 
+
+.close() ----> import to close otherwise it will not save the File but if use try resource tne no need it will auto close

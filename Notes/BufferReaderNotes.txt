@@ -1,0 +1,51 @@
+Buffer Reader
+Buffer Reader is the java class that read the input stream from the file using the buffer 
+This read line by line instead of character by character
+
+It use buffer pool store the READED DATA IN RAM IT ALSO USE ANOTHER READER fILErEADER TO READ AND THEN IT by using it gives the 
+
+
+File → FileReader → BufferedReader → Program
+
+| Feature | FileReader | BufferedReader |
+| ------- | ---------- | -------------- |
+| Speed   | Slow       | Fast 🚀        |
+| Reads   | Char       | Line           |
+| Buffer  | No         | Yes ✔️         |
+| Use     | Small file | Large file     |
+
+
+Summary (Cheat Sheet)
+
+Reads line by line ✔️
+
+Faster than FileReader ✔️
+
+Uses buffer ✔️
+
+Best for big files ✔️
+
+Code
+__________
+
+package Code.src;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class BufferReaderDemo {
+    public static void main(String[] args) {
+        String line;  beacuse it store line by line 
+        try{
+            BufferedReader bf = new BufferedReader(new FileReader("../data/bufferreaddemo.txt"));
+             Buffer reader use file reader to read it file then store it in buffer pool and gives the read data 
+             it is fatsyt that is why we use
+            while ((line = bf.readLine()) != null) {
+                System.out.println(line);
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+}
