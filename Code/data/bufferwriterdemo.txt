@@ -1,0 +1,3 @@
+Buffer Reader
+Buffer Reader is the java class that read the input stream from the file using the buffer
+This read line by line instead of character by character

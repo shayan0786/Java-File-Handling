@@ -1,0 +1,14 @@
+Buffered Writer
+
+BufferedWriter is a Java class used to write text to a character output stream efficiently by using a buffer. 
+It reduces direct disk access by storing data temporarily in memory
+
+Program → FileWriter → BufferedWriter → File
+
+| Feature  | FileWriter | BufferedWriter |
+| -------- | ---------- | -------------- |
+| Speed    | Medium     | Fast 🚀        |
+| Buffer   | No         | Yes ✔️         |
+| Best For | Small file | Large file     |
+
+
