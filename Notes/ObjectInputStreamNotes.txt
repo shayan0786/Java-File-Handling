@@ -1,0 +1,40 @@
+ObjectInputStream
+
+ObjectInputStream is a Java class used to read Java objects from a file or input stream.
+It is mainly used in deserialization.
+
+One-liner:
+ObjectInputStream = Object reader from file ✔️
+
+File → FileInputStream → ObjectInputStream → Object
+
+Deserialization is the process of converting a byte stream back into a Java object.
+
+Load = Deserialization
+
+File → ObjectInputStream → Object
+
+
+Code
+_____
+
+
+package Code.src;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class ObjectInputStreamDemo {
+    public static void main(String[] args) {
+        try(ObjectInputStream ois =  new ObjectInputStream(new FileInputStream("../data/student.dat"))){
+            Student s1 = (Student)ois.readObject();
+            System.out.println("ID: " + s1.id);
+            System.out.println("Name: " + s1.name);
+        }catch(IOException | ClassNotFoundException e){
+            e.printStackTrace();
+        }
+    }
+}
+
+

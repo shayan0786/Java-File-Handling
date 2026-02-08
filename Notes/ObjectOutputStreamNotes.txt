@@ -1,0 +1,65 @@
+ObjectOutputStream
+
+ObjectOutputStream is a Java class used to 
+write Java objects into a file or output stream in binary form. 
+It is mainly used for serialization
+
+Object → ObjectOutputStream → FileOutputStream → File
+
+Serialization Important Topic
+
+Serialization is the process of converting a Java object
+into a byte stream so that it can be saved in a file or sent over a network.
+
+import java.io.Serializable;
+
+class Student implements Serializable {
+}
+Object → ObjectOutputStream → File
+
+| Word          | Meaning          |
+
+| ------------- | ---------------- |
+| Serializable  | Marker Interface |
+| Byte Stream   | Binary Data      |
+| writeObject() | Save             |
+| readObject()  | Load             |
+| transient     | Ignore variable  |
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("../data/student.dat")))
+Constructor of object this should finally implements FileOutputStream must there 
+
+CODE
+_____
+
+package Code.src;
+
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class Student implements Serializable{
+    int id;
+    String name;
+    int marks;
+    Student( int id,String name,int marks){
+        this.id= id;
+        this.name = name;
+        this.marks = marks;
+    }
+}
+
+public class ObjectOutputStreamDemo {
+    public static void main(String[] args) {
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("../data/student.dat"))){
+                Student s = new Student(52, "Shayan", 52);
+                oos.writeObject(s);
+                System.out.println("Object created");
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+}
+
